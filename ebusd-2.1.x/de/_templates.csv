@@ -10,8 +10,8 @@ opdatacyclic,UCH,0x55=stop;0xaa=start,,zyklische Übertragung
 opdatatransfer,UCH,0=stop;1=cyclic;2=event;3=single;3=cyclicandevent,,Übertragung
 opdataheat,UCH,0x00=off;0x01=none;0x55=hotwater;0xaa=heating;0xcc=emissioncheck;0xdd=qualitycontrol;0xee=controlstop;0x66=hotwaterincontrolstop;0xbb=hotwaterinheating;0x44=controlstopinstage,,Wärmeanforderung
 opdataaction,UCH,0x00=none;0x01=stoppump;0x02=startpump;0x03=stopconsumer;0x04=startconsumer,,
-desiredtemp,UCH,,°C,Solltemperatur
-outsidetemp,SCH,,°C,Außentemperatur
+desiredtemp,UCH,,�C,Solltemperatur
+outsidetemp,SCH,,�C,Außentemperatur
 percent,D2C,,%,
 percent0,UCH,,%,
 percent1,D1C,,%,
@@ -21,6 +21,7 @@ temp,D2C,,°C,Temperatur
 temp0,UCH,,°C,Temperatur
 temp1,D1C,,°C,Temperatur
 temp2,D2B,,°C,Temperatur
+temp3,D2C,,°C,Temperatur
 press,D2B,,bar,Druck
 btime,BTI,,,Uhrzeit
 bdate,BDA,,,Datum
