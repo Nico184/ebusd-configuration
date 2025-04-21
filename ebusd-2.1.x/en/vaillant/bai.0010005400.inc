@@ -92,15 +92,16 @@ r,,CounterStartAttempts4,CounterStartAttempts4_DK,,,,"8200",,,temp0,,,unsuccessf
 r,,ReturnTempMax,TRT_max_DK,,,,"BE00",,,temp,,,max. return temperature
 r,,PumpHwcFlowSum,PumpDHWFlowSum_DK,,,,"C100",,,UIN,,,summed up DHW flow rate
 r,,PumpHwcFlowNumber,PumpDHWFlowNumber_DK,,,,"C200",,,UCH,,,number of times DHW flow rate was detected
-r,,PrEnergySumHwc1,PrEnergySumDHW1_DK,,,,"C500",,,ULG,,,Predictive Maintenance data
-r,,PrEnergyCountHwc1,PrEnergyCountDHW1_DK,,,,"C600",,,ULG,,,Predictive Maintenance data
+r;wi,,PrEnergySumHwc1,PrEnergySumDHW1_DK,,,,"C500",,,ULG,,,Predictive Maintenance data
+r;wi,,PrEnergyCountHwc1,PrEnergyCountDHW1_DK,,,,"C600",,,ULG,,,Predictive Maintenance data
 r,,WaterpressureVariantSum,WaterpressureVariantSum_DK,,,,"F000",,,pressm2,,,Predictive Maintenance data
 r,,WaterpressureMeasureCounter,WaterpressureMeasureCounter_DK,,,,"F100",,,UCH,,,Predictive Maintenance data
 r,,PrAPSCounter,PrAPSCounter_DK,,,,"F200",,,UCH,,,Predictive Maintenance data
 r,,PrAPSSum,PrAPSSum_DK,,,,"F300",,,seconds2,,,Predictive Maintenance data
 r,,CurrentPartload,CurrentPartload,,,,"0001",,,UIN,,kW,Current calculated partload
 r,,PrVortexFlowSensorValue,PrVortexFlowSensorValue_DK,,,,"F400",,,SIN,,ADC,Predictive Maintenance data
-r,,PrEnergyCountHc1,PrEnergyCountCH1_DK,,,,"F500",,,ULG,,,Predictive Maintenance data
+r;wi,,PrEnergySumHc1,PrEnergySumCH1_DK,,,,"F500",,,ULG,,,Predictive Maintenance data
+r;wi,,PrEnergyCountHc1,PrEnergyCountCH1_DK,,,,"F600",,,ULG,,,Predictive Maintenance data
 # ##### expert level\Main #####,,,,,,,,,,,,,
 r,,externalFlowTempDesired,external flowsetpoint,,,,"2500",,,temp,,,Flow target temperature from external regulator to terminal 7-8-9
 r,,externalHwcSwitch,DHWSwitch_DK,,,,"0000",,,onoff,,,Demand external tank (via contact)
@@ -117,8 +118,8 @@ r,,HwcUnderHundredStarts,BW_UnderHundred_SwiActi_DK,,,,"3100",,,UCH,,,DHW switch
 r,,EbusSourceOn,EbusSourceOn_DK,,,,"3400",,,onoff,,,Activation signal of the eBus source
 r,,Fluegasvalve,Fluegasvalve_DK,,,,"3C00",,,onoff,,,flue gasvalve activation signal
 r,,ExternalFaultmessage,External_Faultmessage_DK,,,,"3E00",,,onoff,,,external fault message
-r,,RückmeldungBrennstoffventil1,Rückmeldung Brennstoffventil 1,,,,"4700",,,UCH,240=off;15=on,,feedback gasvalve (from ASIC)
-r,,RückmeldungBrennstoffventil2,Rückmeldung Brennstoffventil 2,,,,"4800",,,UCH,240=off;15=on,,feedback gasvalve (from Microcontroller)
+r,,RueckmeldungBrennstoffventil1,Rückmeldung Brennstoffventil 1,,,,"4700",,,UCH,240=off;15=on,,feedback gasvalve (from ASIC)
+r,,RueckmeldungBrennstoffventil2,Rückmeldung Brennstoffventil 2,,,,"4800",,,UCH,240=off;15=on,,feedback gasvalve (from Microcontroller)
 r,,Ignitor,SD_Ignitor_DK,,,,"4900",,,UCH,240=off;15=on,,igniton activated
 r,,Fan,Fan_DK,,,,"4A00",,,yesno,,,Fan activation signal
 r,,HwcTypes,DHW_Types_DK,,,,"4B00",,,UCH,,,DHW type of the appliance
@@ -152,7 +153,7 @@ r,,SRSyphonINSDSwitch,SR_Syphon_IN_SD_Switch_DK,,,,"CF00",,,UCH,240=no;15=yes,,f
 r,,TemplimiterWithNTC,SD_STL_with_NTC,,,,"D200",,,UCH,240=no;15=yes,,Safety temperature limit concept:1 = safety temp. Limit check with NTC0 = safety temp. Limit check with contact
 r,,VolatileLockoutIFCGV,SD_VolatileLockout_IFC_GV_DK,,,,"D300",,,UCH,240=no;15=yes,,all IFC faults are volataile
 r,,DisplayMode,DisplayMode_DK,,,,"DA00",,,UCH,,,Display mode of the aplliance
-r,,RückmeldungBrennstoffventil3,Rückmeldung Brennstoffventil 3,,,,"DB00",,,UCH,240=off;15=on,,Gasvalve activation signal (from Microcontroller)
+r,,RueckmeldungBrennstoffventil3,Rückmeldung Brennstoffventil 3,,,,"DB00",,,UCH,240=off;15=on,,Gasvalve activation signal (from Microcontroller)
 r,,InitialisationEEPROM,InitialisationEEPROM,,,,"DC00",,,yesno,,,Initialisation off all EEPROM values (done in the production)
 r,,DefaultSettingEEPROM,DefaultSettingEEPROM_DK,,,,"DD00",,,yesno,,,default value setting off all EEPROM values (done in the production)
 r,,TimerInputHc,TimerInputCH_DK,,,,"DE00",,,onoff,,,timer input (block heatdemand)
@@ -162,7 +163,7 @@ r;wi,,RManagEE.VirtualPartloadEnableTemp,TR_Manag_EE.Virtual_Partload_Enable_DK,
 r,,ExternGasvalve,ExternGasvalve_DK,,,,"E400",,,onoff,,,external gasvalve activated
 r,,DCFTimeDate,DCF_TimeDate_DK,,,,"E500",,,HEX:8,,,DCF Time / date stamp struct { uchar sec; uchar min; uchar std; uchar tag; uchar mon; uchar wtg; uchar jah; } Tdcf77_time;
 r,,InitialisationSequence,InitialisationSequence_DK,,,,"9A01",,,UCH,,,value:0 -> off1-> full initialisation incl. all defaultvalues (done in the production)
-r,,FlowSetPotmeter,FlowSetPotmeter,,,,"1900",,,temp,,,flow setpoint potentiometer
+r,,FlowSetPotmeter,FlowSetPotmeter,,,,"F003",,,temp,,,flow setpoint potentiometer
 r,,HwcSetPotmeter,DHWSetPotmeter,,,,"F103",,,temp,,,DHW setpoint potentiometer
 r,,HwcSwitch,DHWSwitch,,,,"F303",,,onoff,,,DHW on/off
 r,,ProductionByte,ProductionByte,,,,"3E04",,,UCH,,,
